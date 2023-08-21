@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Valor</th>
+      <th>Desconto</th>
+      <th>Fabricação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produto of produtos">
+      <td>{{ produto.nome | uppercase}}</td>
+      <td>{{ produto.email | lowercase }}</td>
+      <td>{{ produto.valor | currency:'BRL' }}</td>
+      <td>{{ produto.desconto | percent }}</td>
+      <td>{{ produto.fabricacao | date }}</td>
+    </tr>
+  </tbody>
+</table>
